@@ -8,10 +8,9 @@ export default function Home() {
       <div className="mb-2 shadow">
         <Nav />
         <HomeBody />
-
       </div>
-
     </main>
   );
 }
+
 
