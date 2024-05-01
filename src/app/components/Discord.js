@@ -4,35 +4,59 @@ import { useState, useEffect } from 'react';
 const userID = "144234873031229440";
 
 const Discord = () => {
-  const [discordUser, setDiscordUser] = useState(null);
+  const [discordUser, setDiscordUserStatus] = useState(null);
+  const [discordusername, setDiscordusernames] = useState(null);
+
 
   useEffect(() => {
     const fetchDiscordStatus = () => {
       fetch(`https://api.lanyard.rest/v1/users/${userID}`)
         .then(response => response.json())
         .then(data => {
-          setDiscordUser(data.data.discord_status);
+          setDiscordUserStatus(data.data.discord_status);
         });
     };
-
     fetchDiscordStatus();
     const intervalId = setInterval(fetchDiscordStatus, 5000); // Fetch data every 5 seconds
+
+
+    const getDiscordMessage = () => {
+      fetch(`https://api.lanyard.rest/v1/users/${userID}`)
+      .then (response => response.json())
+      .then(data => {
+        setDiscordusernames(data.data.discord_user.username);
+      });
+    };
+    getDiscordMessage();
+
 
     // Clean up function
     return () => clearInterval(intervalId);
   }, []);
 
+  let statusColor = "bg-red-500";
+  if (discordUser === 'online') {
+    statusColor = 'bg-green-500';
+  } else if (discordUser === 'idle') {
+    statusColor = 'bg-yellow-500';
+  } else if (discordUser === 'dnd') {
+    statusColor = 'bg-red-500';
+  } else {
+    statusColor = 'bg-gray-500';
+  }
+
+
+
   return (
     <div>
-     <img src="https://cdn.discordapp.com/avatars/144234873031229440/6ee3fb58d93653edc1d91bf97022ca08.png?size=4096" className=" rounded-full size-24 z-1" alt="image" />
-                <div className="absolute bottom-1 right-1 w-7 h-7 bg-yellow-600 rounded-full border-black border-4  z-2">
-                    <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></div>
-                    <p>
-                    {discordUser ? `User status: ${discordUser}` : 'Loading...'}
+      <img src="https://cdn.discordapp.com/avatars/144234873031229440/6ee3fb58d93653edc1d91bf97022ca08.png?size=4096" className="rounded-full size-24 z-1" alt="image" />
+      <div className={`absolute bottom-1 right-1 w-7 h-7 rounded-full border-black border-4 z-2 ${statusColor}`}>
+        <div className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${statusColor}`}></div>
+        <p className="ml-10">{discordusername ? `User-name: ${discordusername}` : 'Loading...'}</p>
 
-                    </p>
-                </div>
-                    </div>
+      </div>
+    </div>
+
   );
 };
 
