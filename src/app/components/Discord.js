@@ -6,6 +6,9 @@ const userID = "144234873031229440";
 const Discord = () => {
   const [discordUser, setDiscordUserStatus] = useState(null);
   const [discordusername, setDiscordusernames] = useState(null);
+  const [displayName, setDisplayName] = useState(null);
+
+
 
 
   useEffect(() => {
@@ -30,6 +33,16 @@ const Discord = () => {
     getDiscordMessage();
 
 
+    const getDisplayName = () => {
+      fetch(`https://api.lanyard.rest/v1/users/${userID}`)
+      .then (response => response.json())
+      .then(data => {
+        setDisplayName(data.data.display_name);
+      });
+    };
+    getDisplayName();
+
+
     // Clean up function
     return () => clearInterval(intervalId);
   }, []);
@@ -52,7 +65,8 @@ const Discord = () => {
       <img src="https://cdn.discordapp.com/avatars/144234873031229440/6ee3fb58d93653edc1d91bf97022ca08.png?size=4096" className="rounded-full size-24 z-1" alt="image" />
       <div className={`absolute bottom-1 right-1 w-7 h-7 rounded-full border-black border-4 z-2 ${statusColor}`}>
         <div className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${statusColor}`}></div>
-        <p className="ml-10">{discordusername ? `User-name: ${discordusername}` : 'Loading...'}</p>
+        <p className="w-32 ml-10 text-xs text-gray-300 first-letter">{discordusername ? `${discordusername}` : 'Loading...'}</p>
+        <p className="w-32 ml-10 text-xs text-gray-300 ">{displayName ? `${displayName}` : 'Loading...'}</p>
 
       </div>
     </div>
