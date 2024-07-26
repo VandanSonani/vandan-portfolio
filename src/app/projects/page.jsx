@@ -4,8 +4,7 @@ import Nav from '../components/Nav.js';
 const Projects = () => {
   return (
 
-    
-    <main className="grid justify-items-center py-28 w-full">
+    <main className="grid justify-items-center py-28 w-full dark:bg-neutral-900">
       <div className="mb-2 space-y-8">
         <Nav />
         <h1 className="text-4xl font-extrabold">

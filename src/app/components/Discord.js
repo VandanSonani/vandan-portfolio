@@ -82,7 +82,7 @@ const Discord = () => {
   return (
     <div>
       <img src="https://cdn.discordapp.com/avatars/144234873031229440/567600ee8a93a6b45b5a51f5082d3aba.png?size=4096" className="rounded-full size-24 z-1" alt="image" />
-      <div className={`absolute bottom-12 right-1 w-7 h-7 rounded-full border-black border-4 z-2 ${statusColor}`}>
+      <div className={`absolute bottom-12 right-1 w-7 h-7 rounded-full dark:border-neutral-900 border-4 z-2 ${statusColor}`}>
         <div className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${statusColor}`}></div>
       </div>
       <div className="relative bottom-16 -right-20  ml-10 ">
@@ -90,6 +90,7 @@ const Discord = () => {
         <p className=" w-8  text-xs text-gray-300 ">{displayName ? `${displayName}` : 'Loading...'}</p>
         <p className=" w-8  text-xs ">{emoji ? `${emoji}` : 'Loading...'} {status ? `${status}` : 'Loading...'}</p>
       </div>
+
     </div>
 
 
