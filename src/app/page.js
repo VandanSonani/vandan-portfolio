@@ -1,6 +1,5 @@
 
 
-import Image from "next/image";
 import Nav from "./components/Nav"
 import HomeBody from "./components/HomeBody";
 import Projects from "./projects/page";
