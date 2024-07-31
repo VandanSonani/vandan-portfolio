@@ -15,8 +15,15 @@ const Spotify = () => {
       if (data.data.spotify) {
         setSongName(data.data.spotify.song);
         setSongImage(data.data.spotify.album_art_url);
+        console.log(data.data.spotify.album_art_url);
+
         setArtistName(data.data.spotify.artist);
       }
+      else {
+        setSongName("Spotify is not currently playing");
+        setSongImage("");
+        setArtistName("");
+    }
     });
   };
   getCurrentlyPlayingSong();
@@ -34,11 +41,14 @@ const Spotify = () => {
     return (
 <div className = "flex items-center justify-center">
     <div className="flex w-fit items-center justify-center mt-2 p-4 bg-neutral-600 bg-opacity-25 rounded-md border-[0.1px] border-neutral-600 hover:bg-neutral-900 transition-colors duration-500">
-        <img className="size-32" src={songImage} alt="Nothing is currently playing" />
-        <div className="ml-4">
-            <p className="text-lg ">{songName}</p>
+    {songImage ? (
+                <img className="size-32" src={songImage} alt="Currently playing song" />
+            ) : (<div></div>)}
+            <div className = "flex-col pl-5">
+            <p className="text-lg  ">{songName}</p>
             <p className="text-lg ">{artistName}</p>
-        </div>
+            </div>
+
     </div>
     </div>
     );

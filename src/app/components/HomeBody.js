@@ -129,7 +129,7 @@ const HomeBody = () => {
                 </div>
 
                 <div className="flex  flex-col pb-1">
-                <h2 className="text-sm text-black/70 dark:text-white/50 font-medium uppercase">Music I listen to </h2>
+                <h2 className="text-sm text-black/70 dark:text-white/50 font-medium uppercase">What I'm listening to </h2>
                 <hr className=" border-gray-600 pb-3" />
 
                 <Spotify />
