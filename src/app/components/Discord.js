@@ -100,7 +100,7 @@ const Discord = () => {
 
     return (
     <div>
-        <img src="https://cdn.discordapp.com/avatars/144234873031229440/567600ee8a93a6b45b5a51f5082d3aba.png?size=4096" className="rounded-full size-24 z-1" alt="image" />
+        <img src="https://media.licdn.com/dms/image/D5603AQGdCmjAw2-KZA/profile-displayphoto-shrink_400_400/0/1668381611081?e=1727913600&v=beta&t=JWJnMP6DyHx6e0_MsrPH9kr-3X4O7DxwYjHzw-Icbo0" className="rounded-full size-24 z-1" alt="image" />
 
         <div className={`absolute bottom-1 left-16 w-7 h-7 rounded-full dark:border-neutral-900 border-4 ${statusColor}`}>
             <div className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${statusColor}`}></div>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 const TimeWeather = () => {
-    const [time, setTime] = useState(new Date());
+    const [time, setTime] = useState(null);
 
     useEffect(() => {
         const timer = setInterval(() => {
