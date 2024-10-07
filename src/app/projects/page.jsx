@@ -29,6 +29,8 @@ const Projects = () => {
           Digital Portfolio: Created using Javascript, tailwind css.
         </div>
       </div>
+
+      
     </main>
   );
 };
