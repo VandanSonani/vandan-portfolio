@@ -14,12 +14,7 @@ export default function Home() {
 
 
     <main className="grid justify-items-center w-full dark:bg-neutral-900">
-      <head>
-        <title>Vandan's Website
-          
-        </title>
-        
-        </head>
+      
       <div className="mb-2 ">
         <Nav />
         <HomeBody />
