@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Vandan's website",
-  description: "Personal portfolio holding all my previous projects and work experience, but personalized to myself",
+  description: "Personal portfolio holding all my previous projects and work experience, but personalized to myself made with Tailwind CSS and JavaScript",
 };
 
 export default function RootLayout({ children }) {
