@@ -102,7 +102,7 @@ const Discord = () => {
     <div>
         <img src="https://media.licdn.com/dms/image/v2/D5603AQGdCmjAw2-KZA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1668381611081?e=1733961600&v=beta&t=8_Y2alElPjIgIp75bJmJrFXti057L5dqS8RYkMLzRTs" className="rounded-full size-24 z-1" alt="image" />
 
-        <div className={`absolute bottom-1 left-16 w-7 h-7 rounded-full dark:border-neutral-900 border-4 ${statusColor}`}>
+        <div className={`absolute bottom-1 left-16 w-7 h-7 rounded-full border-neutral-900 border-4 ${statusColor}`}>
             <div className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${statusColor}`}></div>
         </div>
         </div>

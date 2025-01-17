@@ -3,6 +3,7 @@ import Discord from './Discord';
 import TechCard from './TechCard';
 import Spotify from './Spotify';
 import TimeWeather from './TimeWeather';
+import {green} from "next/dist/lib/picocolors";
 
 
 
@@ -128,21 +129,26 @@ const HomeBody = () => {
 
             <div className="flex-col space-y-3 p-4">
 
-                <div className="justify-center duration-500 hover:bg-neutral-900 text-center rounded-md border-[0.1px] border-neutral-600 p-4 bg-opacity-25 bg-neutral-600 text-white w-full">
-                    Ciphers: Made using C++, to help create a password system, and help encrypting messages as well as decrypting following an algorithm.
+                <div
+                    className="justify-center duration-500 hover:bg-neutral-900 text-center rounded-md border-[0.1px] border-neutral-600 p-4 bg-opacity-25 bg-neutral-600 text-white max-w-6xl ">
+                    <span className="text-green-300"> Competitive Minesweeper</span>: Developed a multiplayer minesweeper game using
+                    Java, CSS, and TypeScript.
+                    Using test-driven development, I implemented random generation of mines and a timer to track the
+                    game duration.
                 </div>
 
-                <div className="justify-center duration-500 hover:bg-neutral-900 text-center rounded-md border-[0.1px] border-neutral-600 p-4 bg-opacity-25 bg-neutral-600 text-white w-full">
-                    The Great 13: Created using C++, fully functional game recreated from Cracker Barrel's peg game.
+                <div
+                    className="justify-center duration-500 hover:bg-neutral-900 text-center rounded-md border-[0.1px] border-neutral-600 p-4 bg-opacity-25 bg-neutral-600 text-white w-6xl">
+                    <span className={"text-green-300"}>Three Card Poker</span>: Utilized Java, FXML, and CSS to create a two player game with a user-friendly GUI.
                 </div>
 
-                <div className="justify-center duration-500 hover:bg-neutral-900 text-center rounded-md border-[0.1px] border-neutral-600 p-4 bg-opacity-25 bg-neutral-600 text-white w-full">
-                    Digital Portfolio: Created using Javascript, tailwind css.
+                <div className="justify-center duration-500 hover:bg-neutral-900 text-center rounded-md border-[0.1px] border-neutral-600 p-4 bg-opacity-25 bg-neutral-600 text-white w-6xl">
+                    <span className={"text-green-300"}>Digital Portfolio</span>: Created using Javascript, tailwind css.
                 </div>
             </div>
 
             <div className="flex  flex-col pb-1">
-                <h2 className="text-sm text-black/70 dark:text-white/50 font-medium uppercase">What I'm listening to </h2>
+                <h2 className="text-sm text-white/50 font-medium uppercase">What I'm listening to </h2>
                 <hr className=" border-gray-600 pb-3" />
 
                 <Spotify />
