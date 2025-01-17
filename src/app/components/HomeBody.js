@@ -9,7 +9,7 @@ import TimeWeather from './TimeWeather';
 const HomeBody = () => {
     return (
 
-
+        
         <div>
 
             <p className="text-white font-extrabold text-6xl sm:flex tracking-tighter">
@@ -66,7 +66,7 @@ const HomeBody = () => {
 
             </div>
             <div className="flex flex-col  pt-28 pb-1">
-                <h2 className="text-sm text-black/70 dark:text-white/50 font-medium uppercase">Technology I use</h2>
+                <h2 className="text-sm text-white/50 font-medium uppercase">Technology I use</h2>
             </div>
             <hr className="w-full border-t border-gray-600 pb-3" />
             <div className="flex justify-center">
@@ -122,7 +122,7 @@ const HomeBody = () => {
 
 
             <div className="pt-5">
-                <label className="text-sm text-black/70 dark:text-white/50 font-medium uppercase">Projects</label>
+                <label className="text-sm text-white/50 font-medium uppercase">Projects</label>
             </div>
             <hr className="w-full border-gray-600 pb-3" />
 
